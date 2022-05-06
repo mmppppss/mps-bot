@@ -663,15 +663,15 @@ case "s":
         ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message .extendedTextMessage.contextInfo : mek;
           media = await Fg.downloadAndSaveMediaMessage(encmedia); 
           await createExif(a, b); 
-          out = getRandom(".webp"); 
-          ffmpeg(media) 
+          out = "temp/sticker.webp"; 
+          ffmpeg(media).output(out)
           .on("error", (e) => { 
             console.log(e); 
             Fg.sendMessage(from, "⚠️ Error", "conversation", { quoted: mek }); 
             fs.unlinkSync(media); 
             })
             .on("end", () => { 
-              _out = getRandom(".webp"); 
+              /*_out = getRandom(".webp"); 
               spawn("webpmux", [
                 "-set",
                 "exif",
@@ -679,7 +679,9 @@ case "s":
                 out,
                 "-o",
                 _out,
-              ]).on("exit", () => {
+              ]*/
+              Fg.sendMessage(from,fs.readFileSync(out),sticker);
+              ).on("exit", () => {
                 Fg.sendMessage(
                   from,
                   fs.readFileSync(_out),
