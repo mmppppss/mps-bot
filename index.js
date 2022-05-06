@@ -684,8 +684,8 @@ case "s":
               }).on("exit", () => {
                 Fg.sendMessage(
                   from,
-                  fs.readFileSync(_out),
-                  "stickerMessage",
+                  fs.readFileSync(out),
+                  sticker,
                   { quoted: mek }
                 );
                 fs.unlinkSync(out);
