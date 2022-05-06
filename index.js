@@ -1671,7 +1671,7 @@ Fg.groupSettingChange(from, GroupSettingChange.messageSend, true)
     }
     break 
     
-    /*case 'voicecommand':
+    case 'voicecommand':
     case 'voicecmd':
     if(!isPremium && !isOwner) return m.reply(msg.premium)
    // if(isGroup) return m.reply(msg.private)
@@ -1687,7 +1687,7 @@ Fg.groupSettingChange(from, GroupSettingChange.messageSend, true)
     } else {
       m.reply(msg.OnorOff)
     }
-    break*/
+    break
     
 
   case 'q': 
