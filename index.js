@@ -691,8 +691,7 @@ case "s":
                 fs.unlinkSync(out);
                 fs.unlinkSync(_out);
                 fs.unlinkSync(media);
-              });
-            })
+              })
             .addOutputOptions([
               `-vcodec`,
               `libwebp`,
