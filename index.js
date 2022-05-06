@@ -680,8 +680,8 @@ case "s":
                 "-o",
                 _out,
               ]*/
-              Fg.sendMessage(from,fs.readFileSync(out),sticker);
-              ).on("exit", () => {
+              Fg.sendMessage(from,fs.readFileSync(out),sticker)
+              }).on("exit", () => {
                 Fg.sendMessage(
                   from,
                   fs.readFileSync(_out),
