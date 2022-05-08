@@ -1470,6 +1470,7 @@ Fg.groupSettingChange(from, GroupSettingChange.messageSend, true)
     break
     
     case 'kick':
+    case 'kill':
     if(!isGroup) return m.reply(msg.group)
     if(!isBotAdmins) return m.reply(msg.botadmin)
     if(!isAdmins && !isOwner && !isBot) return m.reply(msg.admin)
