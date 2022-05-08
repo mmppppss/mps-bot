@@ -2254,6 +2254,10 @@ ${menu(prefix)}
      await Fg.adReplyAudio(from, buff, document, goo.judul, capt, img, link[0].url, mek)
                }
 	break
+	case 'prueba':
+	    a= await fetch('https://i.ibb.co/CnHx2Fr/fgmy.jpg').buffer
+	    Fg.sendMessage(from, a,image)
+	break
     default:
 }
 }
