@@ -249,7 +249,7 @@ module.exports = Fg = async (Fg, mek) => {
      const groupId = isGroup ? groupMetadata.jid : '';
      const groupMembers = isGroup ? groupMetadata.participants : '';
      const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : '';
-     const isBot = mek.key.fromMe ? true : false
+     const isBot = mek.key.fromMe ? false : false
      const isOwner = ownerNumber.includes(sender) || false;
      const isBotAdmins = groupAdmins.includes(botNumber) || false;
      const isAdmins = groupAdmins.includes(sender) || false;
